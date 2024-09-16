@@ -36,18 +36,19 @@ C. INFERENCE
 A. COMPILING
 
 Type "make" in a shell. Make sure the GSL is installed.
-
-# To install GSL as follows:
-# 1) download GSL: wget http://mirrors.ustc.edu.cn/gnu/gsl/gsl-1.9.tar.gz
-# 2) tar zxvf gsl-1.9.tar.gz
-# 3) cd gsl-1.9
-# 4) ./configure
-# 5) make
-# 6) make install
-
-
-
+To install GSL as follows:
+1) download GSL: wget http://mirrors.ustc.edu.cn/gnu/gsl/gsl-1.9.tar.gz
+2) tar zxvf gsl-1.9.tar.gz
+3) cd gsl-1.9
+4) ./configure --prefix=
+5) make
+6) make install
 ------------------------------------------------------------------------
+If possible, add below to ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/yuguanglei/Else/Hierachical-sLDA-main/gsl/lib
+export CFLAGS="-I/home/yuguanglei/Else/Hierachical-sLDA-main/gsl/include"
+export LDFLAGS="-L/home/yuguanglei/Else/Hierachical-sLDA-main/gsl/lib"
+export LIBRARY_PATH=/home/yuguanglei/Else/Hierachical-sLDA-main/gsl/lib:$LIBRARY_PATH
 
 B. ESTIMATION
 
